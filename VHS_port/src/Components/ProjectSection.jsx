@@ -11,7 +11,7 @@ import img6 from '../assets/project-1.jpg'
 import img7 from '../assets/project-1.jpg'
 import img8 from '../assets/project-1.jpg'
 import img9 from '../assets/project-1.jpg'
-import Procard from './procard'
+import Procards from './Procards'
 
 
 function ProjectSection() {
@@ -46,7 +46,7 @@ function ProjectSection() {
     return (
         <section className="w-full space-y-10 mt-10">
             {projects.map((pro, index) => (
-                <Procard key={pro.id} project={pro}
+                <Procards key={pro.id} project={pro}
                     reverse={index % 2 === 1} />
             ))}
         </section>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import proimg from "../assets/bg pro.svg";
 
-function Procard({ project, reverse = false }) {
+function Procards({ project, reverse = false }) {
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {
@@ -121,4 +121,4 @@ function Procard({ project, reverse = false }) {
     );
 }
 
-export default Procard;
+export default Procards;
