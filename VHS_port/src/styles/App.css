@@ -1,0 +1,511 @@
+.menu {
+  position: relative;
+  background-color: black;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.044);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  transition: all 0.4s ease;
+}
+
+
+
+.menu:hover {
+  transform: scale(1.02);
+  border-bottom: 1px solid #8a2be2;
+}
+
+.menu_items {
+  display: flex;
+  gap: 20px;
+}
+
+h5 {
+  color: white;
+  font-family: 'Patrick Hand SC';
+  font-size: 1.5vw;
+  align-items: center;
+}
+
+.logo h5 {
+  margin: 0;
+  color: white;
+  font-family: 'Moonwalk';
+  font-size: 2vw;
+  align-items: center;
+  font-weight: 600;
+}
+
+.menu_items {
+  display: flex;
+  gap: 25px;
+}
+
+.menu_items h5 {
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu_items h5:hover {
+  color: #bbbbbb;
+}
+
+.menu_items a:not(.no-menu-style) {
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  padding: 0 10px;
+  border-radius: 10px;
+  font-family: 'Patrick Hand SC', cursive;
+  font-weight: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 13vw;
+  background-color: black;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1rem;
+  animation: floatUpDown 1.5s infinite ease-in-out,
+    fadeInOut 2s infinite;
+}
+
+.down-arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: rotate(45deg);
+  margin-top: 5px;
+}
+
+@keyframes floatUpDown {
+
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero h5 {
+  color: white;
+  font-family: 'Patrick Hand SC', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 120px;
+  height: 120px;
+  margin-right: 20vw;
+  transform: translateY(-37px);
+}
+
+.hero span {
+  color: blueviolet;
+  padding: 0px 10px;
+}
+
+.mainimg {
+  position: relative;
+  display: flex;
+  padding-top: 6vw;
+  transform: translateX(-14vw);
+  align-items: center;
+  justify-content: center;
+}
+
+.me-glow {
+  position: absolute;
+  filter: blur(60px);
+  transform: translateY(-13vw);
+}
+
+.me {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-top: 2vw;
+  transform: translateY(-12vw);
+  z-index: 2;
+}
+
+
+.headline {
+  margin-top: 10px;
+  line-height: 1.1;
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-28vw);
+  margin-right: -30vw;
+}
+
+.headline h1 {
+  color: white;
+  font-family: 'Moonwalk' serif;
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+.headline h6 {
+  color: white;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.5vw;
+  text-decoration: underline;
+  transform: translateY(-20px);
+  margin-right: 30vw;
+  text-decoration-color: blueviolet;
+}
+
+.headline .circle {
+  transform: translateY(-4vw);
+  margin-left: 1vw;
+  rotate: -20deg;
+}
+
+.headline span {
+  color: blueviolet;
+  font-size: 3vw;
+  padding: 0%;
+}
+
+.content {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 5vw 5vw;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.box {
+  position: relative;
+  width: 45%;
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.box h3 {
+  color: white;
+  font-size: 2vw;
+  font-family: 'Patrick Hand SC', cursive;
+  border: 2px solid blueviolet;
+  padding: 10px;
+  border-style: dotted;
+  border-radius: 10px;
+}
+
+.box h3:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+  border: 2px solid white;
+  border-style: dotted;
+  animation: glow-hide 0.9s ease-in-out forwards;
+}
+
+.box p {
+  color: white;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.2vw;
+  text-align: start;
+  margin-top: 20px;
+}
+
+span:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+  animation: glow-hide 0.5s ease-in-out forwards;
+}
+
+@keyframes glow-hide {
+  0% {
+    box-shadow: 0 0 5px blueviolet;
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  100% {
+    box-shadow: 0 0 20px blueviolet;
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+.project {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 6vh 5vw;
+  align-items: center;
+}
+
+
+.project-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.glow {
+  position: absolute;
+  width: 60vw;
+  filter: blur(40px);
+  opacity: 0.6;
+  z-index: 0;
+  transform: translateY(-2vw);
+  transform: translateX(-1vw);
+}
+
+.project-img {
+  position: relative;
+  width: 40vw;
+  z-index: 2;
+}
+
+.btn {
+  position: absolute;
+  width: 2vw;
+  z-index: 3;
+  cursor: pointer;
+  transform: translate(14.2vw, 13.4vw);
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.des {
+  padding: 3vw 0px;
+}
+
+.des h2 {
+  color: white;
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 2vw;
+  padding: 20px 1vw;
+  text-decoration: underline;
+  text-align: center;
+  text-decoration-color: #8a2be2;
+}
+
+.des p {
+  width: 48vw;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.7vw;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+  opacity: 0.3;
+
+  background: linear-gradient(to bottom,
+      #ffffff,
+      #707070,
+      #1C1B1B);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1px;
+  display: inline-block;
+  z-index: 1;
+}
+
+.des p:hover {
+  opacity: 0.9;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.article {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10vh 5vw;
+}
+
+.sand-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.article-background {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.article-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-back {
+  width: 60vw;
+  position: relative;
+  transform: translateY(-5vw);
+  height: 100%;
+}
+
+.article-card {
+  width: 35vw;
+  position: relative;
+  border-radius: 20px;
+  margin-top: -480px;
+  z-index: 1;
+}
+
+.article-card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.id_cards {
+  display: flex;
+  height: 30vw;
+  transform: translate(35vw, -5.8vw);
+  z-index: 1;
+}
+
+.bg-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.1;
+
+  background: url('../assets/logo.svg') no-repeat center;
+  background-size: contain;
+
+  z-index: 1;
+}
+
+/* .con {
+
+  background-color: black;
+} */
+
+/* .Pro-section {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .Pro-section img {
+  width: 30vw;
+  height: auto;
+  padding: 6vw 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .pro-1 {
+  display: block;
+  height: auto;
+} */
