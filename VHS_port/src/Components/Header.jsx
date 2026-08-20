@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/App.css'
 import { Link } from 'react-router-dom'
+import logo from '../assets/viv-logo 1.svg'
 
 
 function Header() {
@@ -8,7 +9,7 @@ function Header() {
         <div className="menu border-t-transparent border-white border-[8px] relative z-[9999]">
             <div className="logo">
                 <Link to="/">
-                    <img src='src/assets/viv-logo 1.svg' />
+                    <img src={logo} />
                 </Link>
             </div>
             <div className="menu_items">
