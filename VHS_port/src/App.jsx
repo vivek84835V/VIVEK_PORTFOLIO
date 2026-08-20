@@ -1,7 +1,5 @@
 import './styles/App.css'
 import Header from './Components/Header'
-import Hero from './Components/Hero'
-import Content from './Components/Content'
 import Navigation from './Routes/Navigation'
 import Footer from './Components/Footer'
 import CustomCursor from './Components/CustomCursor'
@@ -10,7 +8,7 @@ function App() {
   return (
     <>
       <div className='relative z-[9999]'>
-        <CustomCursor />  
+        <CustomCursor />
         <Header />
         <Navigation />
         <Footer />
