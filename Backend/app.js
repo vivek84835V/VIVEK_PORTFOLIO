@@ -9,7 +9,8 @@ dotenv.config({ quiet: true });
 
 app.use(
   cors({
-    origin: "https://vivek-portfolio-ivory.vercel.app/",
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   }),
 );
