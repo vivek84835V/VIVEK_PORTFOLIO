@@ -25,7 +25,6 @@ function Assistant({ onClose }) {
     const HandleEvent = (e) => {
         const inputvalue = e.target.value
         setInput(inputvalue)
-        console.log("HandleEvent message:", message);
     }
 
     const HandleSubmit = async (e) => {
@@ -43,8 +42,7 @@ function Assistant({ onClose }) {
         setInput("");
 
         const res = await handleUser(userMessage);
-        const getaudiores = await HandlePlayAudio(res)
-        console.log(getaudiores, res)
+        await HandlePlayAudio(res)
         setmessage((prev) => [...prev, {
             role: 'assistant',
             content: res
@@ -72,7 +70,7 @@ function Assistant({ onClose }) {
 
             await audio.play();
         } catch (err) {
-            console.log("something wrong in play audio:-", err)
+            throw new Error("something wrong in play audio:-", err)
         }
     }
 
@@ -86,17 +84,13 @@ function Assistant({ onClose }) {
     useEffect(() => {
         if (!partialTranscript) return;
 
-        console.log("Partial:", partialTranscript);
-
     }, [partialTranscript]);
 
     const HandleMicButton = () => {
         if (isListening) {
             stopListening();
-            console.log("listning stop")
         } else {
             startListening();
-            console.log("listning start")
         }
     }
 

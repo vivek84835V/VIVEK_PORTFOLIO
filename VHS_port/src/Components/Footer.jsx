@@ -44,7 +44,7 @@ function Footer() {
               className="flex items-center gap-2 text-white/50 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white"
             >
               <FaLinkedinIn size={14} />
-              linkedin.com/in/your-username
+              linkedin.com/in/vivek-shimpi-/
             </a>
 
             <a
@@ -54,7 +54,7 @@ function Footer() {
               className="flex items-center gap-2 text-white/50 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white"
             >
               <FaGithub size={14} />
-              github.com/your-username
+              github.com/Vivek84835V
             </a>
 
             <a

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import emailjs from "@emailjs/browser";
 
 const PURPLE_LIGHT = "132, 0, 255";
 
 function SleekCard({ children, className = "" }) {
     const cardRef = useRef(null);
-
     useEffect(() => {
         const el = cardRef.current;
 
@@ -68,7 +68,7 @@ function Contact() {
         email: "",
         message: "",
     });
-
+    const formRef = useRef(null)
     const gridRef = useRef(null);
 
     useEffect(() => {
@@ -97,18 +97,35 @@ function Contact() {
         };
     }, []);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        console.log("Inquiry Submitted:", formData);
+        try {
+            await emailjs.send(
+                import.meta.env.YOUR_SERVICE_ID,
+                import.meta.env.YOUR_TEMPLATE_ID,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    message: formData.message,
+                    to_email: "vivek.hemant.shimpi7@gmail.com",
+                },
+                {
+                    publicKey: import.meta.env.YOUR_PUBLIC_KEY,
+                }
+            );
 
-        alert("Message sent to vivek.hemant.shimpi7@gmail.com!");
+            alert("Message sent successfully!");
 
-        setFormData({
-            name: "",
-            email: "",
-            message: "",
-        });
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+            });
+        } catch (error) {
+            console.error("Email sending failed:", error);
+            alert("Failed to send message. Please try again.");
+        }
     };
 
     return (
@@ -160,6 +177,7 @@ function Contact() {
                         className="grid grid-cols-2 gap-4 lg:col-span-7"
                     >
                         <form
+                            ref={formRef}
                             onSubmit={handleSubmit}
                             className="contents"
                         >
@@ -170,6 +188,7 @@ function Contact() {
 
                                 <input
                                     type="text"
+                                    name="from_name"
                                     placeholder="Vivek Shimpi"
                                     value={formData.name}
                                     onChange={(e) =>
@@ -190,6 +209,7 @@ function Contact() {
 
                                 <input
                                     type="email"
+                                    name="from_email"
                                     placeholder="hello@work.com"
                                     value={formData.email}
                                     onChange={(e) =>
@@ -209,6 +229,7 @@ function Contact() {
                                 </label>
 
                                 <textarea
+                                    name="message"
                                     rows={4}
                                     placeholder="What's on your mind?"
                                     value={formData.message}
