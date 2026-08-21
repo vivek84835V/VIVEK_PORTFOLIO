@@ -38,7 +38,7 @@ function Footer() {
           >
 
             <a
-              href="https://www.linkedin.com/in/your-username"
+              href="https://www.linkedin.com/in/vivek-shimpi-/"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-white/50 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white"
@@ -48,7 +48,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/vivek84835V"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-white/50 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white"
@@ -58,17 +58,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://x.com/flyerbeast"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 text-white/50 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white"
-            >
-              <X size={14} strokeWidth={1.7} />
-              x.com/flyerbeast
-            </a>
-
-            <a
-              href="mailto:hello@vivek.dev"
+              href="mailto:vivek.hemant.shimpi7@gmail.com"
               className="flex items-center gap-2 text-white/50 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white"
             >
               <Mail size={14} strokeWidth={1.7} />
