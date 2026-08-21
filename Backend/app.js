@@ -9,7 +9,7 @@ dotenv.config({ quiet: true });
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://vivek-portfolio-ivory.vercel.app/",
     credentials: true,
   }),
 );
