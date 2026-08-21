@@ -11,7 +11,6 @@ function UserHook() {
     setloading(true);
     try {
       const data = await AskQue(question);
-      console.log("UserHook data:", data);
       setUser(data);
       return data;
     } catch (err) {
@@ -26,7 +25,6 @@ function UserHook() {
     setloading(true);
     try {
       const audio = await TextToSpeak(text);
-      console.log("UserHook data:", audio);
       setUser(audio);
       return audio;
     } catch (err) {
