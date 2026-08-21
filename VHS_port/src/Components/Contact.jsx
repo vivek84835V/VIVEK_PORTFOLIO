@@ -102,8 +102,8 @@ function Contact() {
 
         try {
             await emailjs.send(
-                import.meta.env.YOUR_SERVICE_ID,
-                import.meta.env.YOUR_TEMPLATE_ID,
+                import.meta.env.SERVICE_ID,
+                import.meta.env.TEMPLATE_ID,
                 {
                     from_name: formData.name,
                     from_email: formData.email,
@@ -111,7 +111,7 @@ function Contact() {
                     to_email: "vivek.hemant.shimpi7@gmail.com",
                 },
                 {
-                    publicKey: import.meta.env.YOUR_PUBLIC_KEY,
+                    publicKey: import.meta.env.PUBLIC_KEY,
                 }
             );
 
